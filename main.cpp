@@ -4,9 +4,18 @@ using namespace std;
 double my_pow(double num, unsigned int pow)
 {
   double result = 1;
-  for (int i=0;i<pow;i++)
+  while(pow)
   {
-    result *= num;
+    if (pow % 2 == 0)
+    {
+      pow /= 2;
+      num *= num;
+    }
+    else
+    {
+      pow--;
+      result *= num;
+    }
   }
   return result;
 }
@@ -21,7 +30,7 @@ int main()
 
   while (pow<=0)
   {
-    cout << "Incorrect pow. Input new pow?: ";
+    cout << "Incorrect pow. Input new pow: ";
     cin >> pow;
   }
 
