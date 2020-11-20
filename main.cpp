@@ -49,6 +49,15 @@ int main()
   cout << "Input num, pow: ";
   cin >> num >> pow;
 
+<<<<<<< HEAD
+=======
+  while (pow<=0)
+  {
+    cout << "Incorrect pow. Input new pow: ";
+    cin >> pow;
+  }
+
+>>>>>>> feature_fast
   result = my_pow(num, pow);
   cout << "Result: " << result;
 
